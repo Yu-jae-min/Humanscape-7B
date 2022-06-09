@@ -10,9 +10,6 @@ interface Params {
 }
 
 export const getDiseaseNameApi = (params: Params) => {
-  // eslint-disable-next-line no-console
-  console.count('API 호출');
-
   return axios.get<IDiseaseAPIRes>(`${PROXY}/${BASE_URL}`, {
     params: {
       serviceKey: process.env.REACT_APP_API_KEY,
